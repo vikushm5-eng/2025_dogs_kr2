@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная страница питомника "Верный Друг"</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Встроенный скрипт для выделения активной страницы в навигации -->
+    <script>
+        function setActiveLink() {
+            const path = window.location.pathname.split('/').pop();
+            const links = document.querySelectorAll('header a');
+            links.forEach(link => {
+                if (link.getAttribute('href') === path) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+        }
+        window.onload = setActiveLink;
+    </script>
+
+    <header>
+        <div class="container">
+            <h1 style="float: left; margin: 0; padding: 0;">Главная страница питомника "Верный Друг"</h1>
+            <nav>
+                <a href="index.html">Начальная страница</a>
+                <a href="site_content.html">Питомник</a>
+                <a href="puppies.html">Наши щенки</a>  
+                <a href="https://vikushm5-eng.github.io/2025_BWT_kr2/" target="_blank">Внешний сайт</a>
+                <a href="site_content.html#forms">→ К Формам</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- 4-6 Информационных страниц имитируются секциями с закладками -->
+        
+        <section id="lists">
+            <!-- Внутренняя навигация -->
+            <nav style="background: #e9ecef; padding: 10px; margin-bottom: 20px;">
+                <a href="#lists">Каталог</a> |
+                <a href="#images">Наши питомцы</a> |
+                <a href="#tables">Описание</a> |
+                <a href="#forms">Контакты</a> |
+                
+            </nav>
+
+            <h2>Каталог питомцев и условия</h2>
+            
+           <h3>Породы, доступные для резервирования</h3>
+<ul>
+    <li>Лабрадор-ретривер (добродушный компаньон)</li>
+    <li>Джек-рассел-терьер (активный и выносливый)</li>
+    <li>Немецкая овчарка (отличный охранник и друг)</li>
+    <li>Йокрширский терьер (маленький, но очень умный)</li>
+    <li>Бишон фризе (гипоаллергенный вариант)</li>
+</ul>
+
+           <h3>Основные шаги по уходу за щенком</h3>
+<ol>
+    <li>Вакцинация: Проводится в возрасте 8, 12 и 16 недель.</li>
+    <li>Питание: Строго по графику (3-4 раза в день до 6 месяцев).</li>
+    <li>Прогулки: Ежедневные активные прогулки, минимум дважды в день.</li>
+    <li>Дрессировка: Начальная социализация и освоение базовых команд.</li>
+    <li>Ветеринар: Ежегодный профилактический осмотр.</li>
+</ol>
+
+           <h3>Этапы усыновления из нашего питомника</h3>
+<ul>
+    <li>
+        Первичный контакт:
+        <ol>
+            <li>Заполнение анкеты на сайте.</li>
+            <li>Предварительное собеседование по телефону.</li>
+        </ol>
+    </li>
+    <li>
+        Выбор питомца:
+        <ul>
+            <li>Просмотр доступных щенков (от 8 недель).</li>
+            <li>Личное посещение питомника (по договоренности).</li>
+        </ul>
+    </li>
+    <li>
+        Документация и оплата:
+        <ol>
+            <li>Подписание договора купли-продажи.</li>
+            <li>Получение ветеринарного паспорта и родословной.</li>
+        </ol>
+    </li>
+    <li>
+        Передача: Получение всех рекомендаций по уходу и питанию.
+    </li>
+</ul>
+
+        <section id="images">
+            <h2>Наши питомцы</h2>
+            
+            <div style="display: flex; gap: 20px;">
+                <div>
+                    <img src="dog.png" alt="Объект 1" style="border: 2px solid #ccc;">
+                    <p>Джек-рассел-терьер.</p>
+                </div>
+                <div>
+                    <img src="qdog.png" alt="Субъект 1" style="border: 2px solid #ccc;">
+                    <p>Йокрширский терьер.</p>
+                </div> 
+            </div>
+        </section>
+        
+        <section id="tables">
+            <h2>Описание</h2>
+            
+            <!-- Таблица с фоновым изображением -->
+            <div class="table-background">
+                <table class="data-table">
+                    <caption>Питомцы</caption>
+                    <thead>
+                        <tr>
+                            <th>Название породы</th>
+                            <th>Особенности</th>
+                            <th>Миниатюра</th>
+                            <th>Ссылки</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Джек-рассел-терьер</td>
+                            <!-- Изображение в ячейке -->
+                            <td><img src="dog.png" alt="Иконка продукта"  style="width: 170px; height: 90px;"></td>
+                            <td>Подходит для активного образа жизни</td>
+                            <td>
+                                <!-- Гиперссылка -->
+                                <a href="#forms">Сделать заказ</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Йокрширский терьер</td>
+                            <td>Крошечная собака</td>
+                            <td>
+                                <!-- Миниатюрная графическая гиперссылка на большое изображение (открывается в новом окне) -->
+                                <a href="#imageModal" onclick="document.getElementById('imageModal').style.display='block'; return false;">
+                                    <img src="qdog.png" alt="Миниатюра" style="width: 100px; height: 90px;">
+                                </a>
+                            </td>
+                            <td>
+                                <!-- Гиперссылка на внешний сайт (в новом окне) -->
+                                <a href="https://ya.ru" target="_blank">Перейти на Яндекс</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        
+        <!-- Модальное окно для большого изображения (имитация центрированной закладки/окна) -->
+        <div id="imageModal" class="modal">
+            <!-- Кнопка закрытия/возврата -->
+            <a href="#tables" class="close" onclick="document.getElementById('imageModal').style.display='none'">&times;</a>
+            <img class="modal-content" src="fon.png" alt="Большое изображение 600x400">
+        </div>
+        
+        <section id="forms">
+            <h2>Контакты и форма заявки</h2>
+
+            <h3>Личные контактные данные</h3>
+            <form action="https://httpbin.org/post" method="POST" style="border: 1px solid #ccc; padding: 15px;">
+                <label for="fio">Фамилия:</label>
+                <input type="text" id="fio" name="user_surname" required value="Иванов">
+                
+                <label for="name">Имя:</label>
+                <input type="text" id="name" name="user_name" required value="Иван">
+                
+                <label for="group">Группа:</label>
+                <input type="text" id="group" name="user_group" required value="Б24ДЗ01">
+                
+                <label for="phone">Мобильный телефон:</label>
+                <input type="text" id="phone" name="user_phone" required value="8 (800) 555 35-35">
+                
+                <label for="email">Электронная почта:</label>
+                <input type="email" id="email" name="user_email" required value="Ivanov@mail.ru">
+                
+                <label for="date_sent">Дата отправки сообщения (date):</label>
+                <input type="date" id="date_sent" name="date_sent" value="2025-10-26">
+                
+                <button type="submit">Отправить контактные данные</button>
+            </form>
+
+            <h3 style="margin-top: 30px;">Сделать заказ</h3>
+            <form action="https://httpbin.org/post" method="POST" style="border: 1px solid #ccc; padding: 15px;">
+                <!-- type: text -->
+                <label for="product_name">Название породы:</label>
+                <input type="text" id="product_name" name="product_name" value="Йокрширский терьер">
+
+                <!-- type: number -->
+                <label for="quantity">Количество щенков:</label>
+                <input type="number" id="quantity" name="order_quantity" min="1" value="1">
+                
+                <!-- type: date -->
+                <label for="delivery_date">Дата доставки:</label>
+                <input type="date" id="delivery_date" name="delivery_date">
+
+                <!-- type: password -->
+                <label for="order_password">Пароль для подтверждения (password):</label>
+                <input type="password" id="order_password" name="order_password" required>
+                
+                <!-- type: radio -->
+                <p>Способ оплаты (radio):</p>
+                <input type="radio" id="pay_card" name="payment_method" value="card" checked>
+                <label for="pay_card">Карта (По умолчанию)</label><br>
+                <input type="radio" id="pay_cash" name="payment_method" value="cash">
+                <label for="pay_cash">Наличные</label><br>
+
+                <!-- type: checkbox -->
+                <p>Дополнительные опции (checkbox):</p>
+                <input type="checkbox" id="gift" name="option_gift" value="yes">
+                <label for="gift">Подарочная упаковка</label><br>
+                <input type="checkbox" id="express" name="option_express" value="yes" checked>
+                <label for="express">Экспресс-доставка (По умолчанию)</label><br>
+
+                <!-- type: hidden (для отправки значения по-умолчанию) -->
+                <input type="hidden" name="form_version" value="1.0">
+                
+                <button type="submit" style="margin-top: 15px;">Оформить заказ</button>
+            </form>
+
+        </section>
+        <a href="#lists">↑ К началу страницы</a>
+    </div>
+</body>
+</html>
